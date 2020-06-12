@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css"/>
+		<title> Me as a Player </title>
+		<script>
+			function banner(){
+				var text = confirm("This action will result in total annihlation");
+				return text;
+			}
+			function answer(){
+				var radio = document.getElementsByName("trivia");
+				var selection = false;
+				var message = "";	
+				for( var i = 0; i < radio.length; i++) {
+					if(radio[i].value == "kcr" && radio[i].checked == true) {
+						selection = true;
+					} //end if statement
+				} //end for loop
+				if(selection == true) {
+					message = message + "<b><p style='color:green'>Way to go!</p></b>";
+				} else {
+					message = message + "<b><p style='color:red'>Failure</p></b>";
+				}
+					document.getElementById("response").indexHTML = message;
+			} //end function answer
+		</script>
+		<style> 
+		</style> 
+	</head>
+	<body id="background">
+		<div class="leftside"> 
+			<a onclick="return banner()" href="file:///Users/armstrongowen/Desktop/Coding/index.html">
+				<header id="banner">My Soccer</header>
+			</a>
+			<h1> About My Soccer </h1> 
+			<p class="description"> This website is intended to be a digital <span class="text">file of my soccer <i>career</i>.</span>  It should store <strong>awards</strong> I've won places I've played and some examples of me playing in <u>specific</u> situations. </p> 
+			<div class="situation-list">
+				<li class="list"> 1 on 1 attacking </li> 
+				<li class="list"> 1 on 1 defending </li> 
+				<li class="list"> 1 on multiple attacking </li> 
+			</div>
+			<img src="https://images.stockfreeimages.com/1669/sfixl/16699844.jpg"/>
+			<img src="https://images.stockfreeimages.com/465/sfixl/4652685.jpg"/>
+			<h2>Soccer trivia question</h2> 
+			<p>Who has won the English Premiere League the most times?</p> 
+			<form>
+				<div id="response"> </div>
+				<input type="radio" name="trivia" value="true">Manchester United<br> 
+				<input type="radio" name="trivia" value="false">Liverpool<br> 
+				<input type="radio" name="trivia" value="false">Arsenal<br> 
+				<input type="radio" name="trivia" value="false">Chelsea<br> 
+				<input onclick="answer()" type="button" value="Check Answer" id="button">
+			</form>
+		</div>
+		<div class="rightside"> 
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/XqjEfmObo6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+			<hr/> 
+		</div>
+		<div class="clearfloat"></div>
+			<center> Owen Armstrong <br>
+				<a href="https://www.richmondkickersyouth.com/"> Kickers website</a> <br>
+				<a href="https://www.jrhsf.org/athletics"> Eagles website</a> <br>
+				<nav> 
+					<ul id="navmenu">
+						<li id="navitem"><a href="index.html">index</a></li>
+						<li id="navitem"><a href="positions.html">positions</a></li>
+					</ul> 
+				</nav>
+			</center> 
+		<footer id="footer">This website was designed by Owen Armstrong</footer> 
+		<audio width="400" height="220" controls autoplay>
+			<source src="arthur-vyncke-cherry-metal.mp3" type="audio/mpeg">
+			Your browser does not support HTML 5 audio.
+		</audio>
+	</body>
+</html>
